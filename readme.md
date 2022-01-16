@@ -14,7 +14,10 @@ After data preparation, our software comprises three major parts:
 In the repository we uploaded a zipped folder (`preprocessed_data.zip`) containing all the necessary data for running the experiments. The folder is organized in subfolders divided per category. The raw reviews, instead, are publicly available [here](https://jmcauley.ucsd.edu/data/amazon/). Please note that we use the 5-core version of these data sets.
 
 ### Dependencies
-All the dependencies are installed if `pip install -r requirements.txt` is run. 
+All the dependencies are installed if `pip install -r requirements.txt` is run.
+
+### Utils
+The python file `utils.py` contains file paths and hyperparameters needed to run all the scripts. The list of data sets to evaluate can be changed in this file.
 
 ### Data preprocessing
 Before training, some data preparation is needed to run the experiments. This includes, among others, creating and saving data structures that will be used during the EM step to speed up the computational time.
@@ -24,8 +27,6 @@ Once we prepared the data, we can run the EM algorithm. To train it, run the fol
  - `python EM_training.py -K={} -L={}`
 
 where K and L represent the number of user and product classes (default values are 25 and 16 respectively).
-
-The python file `utils.py` contains file paths and hyperparameters needed to run all the scripts. The list of data sets to evaluate can be changed in this file.
 
 **Input**
 - `users_map.pkl`: dictionary of the form `{userID: index}`
