@@ -20,7 +20,7 @@ All the dependencies are installed if `pip install -r requirements.txt` is run.
 The python file `utils.py` contains file paths and hyperparameters needed to run all the scripts. The list of data sets to evaluate can be changed in this file.
 
 ### Data preprocessing
-Before training, some data preparation is needed to run the experiments. This includes, among others, creating and saving data structures that will be used during the EM step to speed up the computational time.
+Before training, some data preparation is needed to run the experiments. This includes creating and saving data structures that will be used during the EM step to speed up the computational time.
 
 ### EM Training
 Once we prepared the data, we can run the EM algorithm. To train it, run the following command:
