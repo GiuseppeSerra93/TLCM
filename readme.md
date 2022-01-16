@@ -4,9 +4,10 @@ This repository contains code for the paper "*Product Rating Prediction through 
 
 For each product category, the code contains all the necessary steps to reproduce the experiments. The scripts are implemented with Python 3.6, and have been tested with Windows OS.
 
-After data preparation, our software comprises two major parts:
+After data preparation, our software comprises three major parts:
 1. EM training with topographic organization of latent classes.
-2. Evaluation of the results through both quantitative and qualitative experiments.
+2. Rating prediction part.
+3. Evaluation of the results through both quantitative and qualitative experiments.
 
 
 ### Data sets
