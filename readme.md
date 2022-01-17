@@ -3,7 +3,7 @@
 
 This repository contains code for the paper "*Product Rating Prediction through Interpretable Latent Class Modeling of User Reviews*" (Serra, Tino, Xu & Yao).
 
-For each product category, the code contains all the necessary steps to reproduce the experiments. The scripts are implemented with Python 3.6, and have been tested with Windows OS.
+For each product category, the code contains all the necessary steps to reproduce the experiments. The scripts are implemented with Python 3.7, and have been tested with Windows OS.
 
 After data preparation, our software comprises three major parts:
 1. EM training with topographic organization of latent classes.
