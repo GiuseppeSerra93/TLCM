@@ -42,10 +42,10 @@ Now, we can run the architecture using the following command:
      - `epochs`: number of epochs (default value 200)
      - `bs`: batch size (default value 256)
      - `lr`: learning rate (default value 0.05)
-     - `gpu`: GPU device ID (int)
+     - `gpu`: GPU device ID (integer)
      - `K`: number of user latent classes (default value 25)
      - `L`: number of product latent classes (default value 16)
      - `runs`: number of runs for each category (default value 5)
 
 ### Results evaluation
-We can use $`\beta`$, $`\theta_{i, k}`$ and $`\theta_{j, \ell}`$ to generate textual explanations for nodes. For more details about the generation of the explanations, we refer the readers to the paper. To visualize and evaluate the results using the output of our model, we provided a Jupyter notebook file `results_visualization.ipynb`. This file contains all the instructions to reproduce the images contained in the paper, and to manually explore the results.
+To visualize and evaluate the results using the output of our experiments, we provided a Jupyter notebook file `results_visualization.ipynb`. This file contains all the instructions to reproduce and to manually explore the results contained in the paper.
