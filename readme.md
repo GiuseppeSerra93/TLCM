@@ -34,7 +34,7 @@ First, run the following script.
  - `python data_preparation_rating.py -K={} -L={}`
 
 After running the EM algorithm we have all the probability assignments of users and products to their respective latent classes. Given the imposed topological organization, we can think of these quantities as images where each pixel represents a latent class and the corresponding value is the latent class probability assignment. This script is used to create the correct input for the architecture. Below, an example of the input transformation. 
-![](https://github.com/GiuseppeSerra93/TLCM/blob/main/fig1.png =250x250)
+<img src="https://github.com/GiuseppeSerra93/TLCM/blob/main/fig1.png" width="100" height="100">
  
 Now, we can run the architecture using the following command:
  - `python rating_prediction_CNN.py -epochs={} -bs={} -lr={} -gpu={} -K={} -L={} -runs={}`
