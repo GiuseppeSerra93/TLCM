@@ -1,4 +1,5 @@
-﻿## Review-based Topographic Organization of Latent Classes
+﻿
+## Review-based Topographic Organization of Latent Classes
 
 This repository contains code for the paper "*Product Rating Prediction through Interpretable Latent Class Modeling of User Reviews*" (Serra, Tino, Xu & Yao).
 
@@ -28,19 +29,22 @@ Once we prepared the data, we can run the EM algorithm. To train it, run the fol
 
 where K and L represent the number of user and product classes (default values are 25 and 16 respectively).
 
-**Input**
-- `users_map.pkl`: dictionary of the form `{userID: index}`
-- `products_map.pkl`: dictionary of the form `{productID: index}`
-- `{}_train.pkl`: replace `{}` with either `users_ID`, `products_ID`, `words`, `ratings`. Lists of training data for users, products, ratings and reviews (i.e. biterm lists).
-- `{}_test.pkl`: replace `{}` with either `users_ID`, `products_ID`, `words`, `ratings`. Lists of test data for users, products, ratings and reviews (i.e. biterm lists).
-- `keywords_mat.pkl`: file containing the $`V \times D`$ vocabulary matrix, i.e. the vector representations of the words contained in the vocabulary (note that the vector representations are taken from the pretrained language model).
+### Rating Prediction Part
+First, run the following script.
+ - `python data_preparation_rating.py -K={} -L={}`
+
+After running the EM algorithm we have all the probability assignments of users and products to their respective latent classes. Given the imposed topological organization, we can think of these quantities as images where each pixel represents a latent class and the corresponding value is the latent class probability assignment. This script is used to create the correct input for the architecture. Below, an example of the input transformation. 
+![](https://github.com/GiuseppeSerra93/TLCM/blob/main/fig1.png)
  
-**Output**
-- `beta.pkl`: the file stores the $`\beta`$ matrix. This matrix will be used for generating textual explanations for the considered nodes.
-- `z_users.pkl`: the file stores $`\theta_{i, k}`$, i.e. the probabilities of user $i$ to belong to cluster $k$. For all users and user clusters.
-- `z_prods.pkl`: the file stores $`\theta_{j, \ell}`$, i.e. the probabilities of product $j$ to belong to cluster $\ell$. For all products and product clusters.
-- `mse_evaluation.csv`: the file contains the train and test mean squared error (MSE) values for each evaluated epoch.
-- `nll_evaluation.csv`: the file contains the train and test negative log-likelihood (NLL) values for each evaluated epoch.
+Now, we can run the architecture using the following command:
+ - `python rating_prediction_CNN.py -epochs={} -bs={} -lr={} -gpu={} -K={} -L={} -runs={}`
+     - `epochs`: number of epochs (default value 200)
+     - `bs`: batch size (default value 256)
+     - `lr`: learning rate (default value 0.05)
+     - `gpu`: GPU device ID (int)
+     - `K`: number of user latent classes (default value 25)
+     - `L`: number of product latent classes (default value 16)
+     - `runs`: number of runs for each category (default value 5)
 
 ### Results evaluation
 We can use $`\beta`$, $`\theta_{i, k}`$ and $`\theta_{j, \ell}`$ to generate textual explanations for nodes. For more details about the generation of the explanations, we refer the readers to the paper. To visualize and evaluate the results using the output of our model, we provided a Jupyter notebook file `results_visualization.ipynb`. This file contains all the instructions to reproduce the images contained in the paper, and to manually explore the results.
