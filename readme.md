@@ -21,7 +21,8 @@ All the dependencies are installed if `pip install -r requirements.txt` is run.
 The python file `utils.py` contains file paths and hyperparameters needed to run all the scripts. The list of data sets to evaluate can be changed in this file.
 
 ### Data preprocessing
-Before training, some data preparation is needed to run the experiments. This includes creating and saving data structures that will be used during the EM step to speed up the computational time.
+Before training, some data preparation is needed to run the experiments. This includes creating and saving data structures that will be used during the EM step to speed up the computational time. First, run the following command:
+ - `python build_dataset.py`
 
 ### EM Training
 Once we prepared the data, we can run the EM algorithm. To train it, run the following command:
@@ -31,14 +32,14 @@ where K and L represent the number of user and product classes (default values a
 
 ### Rating Prediction Part
 First, run the following script.
- - `python data_preparation_rating.py -K={} -L={}`
+ - `python input_preparation_rating.py -K={} -L={}`
 
 After running the EM algorithm we have all the probability assignments of users and products to their respective latent classes. Given the imposed topological organization, we can think of these quantities as images where each pixel represents a latent class and the corresponding value is the latent class probability assignment. This script is used to create the correct input for the architecture. Below, an example of the input transformation. 
 
 <img src="https://github.com/GiuseppeSerra93/TLCM/blob/main/images/fig1.png" height="300">
  
 Now, we can run the architecture using the following command:
- - `python rating_prediction_CNN.py -epochs={} -bs={} -lr={} -gpu={} -K={} -L={} -runs={}`
+ - `python run_CNN_architecture.py -epochs={} -bs={} -lr={} -gpu={} -K={} -L={} -runs={}`
      - `epochs`: number of epochs (default value 200)
      - `bs`: batch size (default value 256)
      - `lr`: learning rate (default value 0.05)
