@@ -217,9 +217,9 @@ for category in categories:
 
     print('Train test splitting..\n')
     reviews_input = pickle.load(open(dir_preprocessed_data_c + 'reviews_input.pkl', "rb")) # {(idx_u,idx_p): [review]}            
-    create_train_test_split(reviews_input, dir_training_data)
+    create_train_test_split(reviews_input, dir_training_data_c)
 
     print('Creating additional training data..\n')
-    reviews_train = pickle.load(open(dir_training_data + 'reviews_train.pkl', "rb")) # {(idx_u,idx_p): [review]}
-    create_additional_data(reviews_train, dir_training_data)
+    reviews_train = pickle.load(open(dir_training_data_c + 'reviews_train.pkl', "rb")) # {(idx_u,idx_p): [review]}
+    create_additional_data(reviews_train, dir_training_data_c)
 

@@ -412,7 +412,7 @@ for category in categories:
     patience = 0
     nll_old = np.infty
     i = 0
-    while i < max_iter and patience <= 5:
+    while i < max_iter and patience <= max_patience:
         print(category + ' - Iteration ' + str(i+1))
         output_dict_zuzp, output_dict_yuyp = e_step(reviews_train, p_zu_u, p_zp_p, p_w_yuyp, alpha_user, alpha_prod, K, L, V)
         p_w_yuyp, p_zu_u, p_zp_p = m_step(output_dict_zuzp, output_dict_yuyp, b_w, w_up, w_pu, K, L, V)

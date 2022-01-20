@@ -12,21 +12,21 @@ DIR_RESULTS = DIR_CWD + '/output_data/'
 
 V = 2000 # vocabulary dimensionality
 
-SIGMA_USERS = 4.0 # concentration parameter for user channel noise
-SIGMA_PRODUCTS = 3.0 # concentration parameter for product channel noise
-K = 25 # number of user latent classes
-L= 16 # number of product latent classes
+SIGMA_USERS = 4.0       # concentration parameter for user channel noise
+SIGMA_PRODUCTS = 3.0    # concentration parameter for product channel noise
+K = 25  # number of user latent classes
+L= 16   # number of product latent classes
 
 # parameters for softening the hard-assignment for P(z_u|u) and P(z_p|p)
 A_USERS = 0.3
 A_PRODUCTS = 0.3
 B_USERS = (1-A_USERS)/(K-1)
-B_PRODUCTS = (1-A_PRODUCTS)/(K-1)
+B_PRODUCTS = (1-A_PRODUCTS)/(L-1)
 
 # parameters for EM training
-TOLERANCE = 5e-4 # tolerance
-MAX_ITER = 5 # max number of iteration
-MAX_PATIENCE = 5 # patience steps
+TOLERANCE = 5e-4    # tolerance
+MAX_ITER = 50       # max number of iteration
+MAX_PATIENCE = 5    # patience steps
 
 # parameters for rating prediction part
 NUM_EPOCHS = 200
