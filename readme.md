@@ -50,3 +50,5 @@ Now, we can run the architecture using the following command:
 
 ### Results evaluation
 To visualize and evaluate the results using the output of our experiments, we provided a Jupyter notebook file `results_visualization.ipynb`. This file contains all the instructions to reproduce and to manually explore the results contained in the paper.
+
+<img src="https://github.com/GiuseppeSerra93/TLCM/blob/main/images/map_products.pdf" height="300">
