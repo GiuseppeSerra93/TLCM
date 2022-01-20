@@ -158,6 +158,7 @@ for category in categories:
 
     print(p_zp_p.shape)
     print(sum(np.sum(p_zp_p, axis=-1)))
+    print()
 
     # ==============================================================================
     #     COMPUTE EMPIRICAL DISTRIBUTION P(w|y_u^{k'},y_p^{\ell'})
@@ -428,7 +429,7 @@ for category in categories:
         nll_old = nll_iter_tr
         nll_train.append(nll_iter_tr)
         nll_test.append(nll_iter_te)
-        print(category + ' - Step %d, NLL__train: %0.3f, NLL__test: %0.3f' % (i+1, nll_iter_tr, nll_iter_te))
+        print(category + ' - Step %d, NLL__train: %0.3f, NLL__test: %0.3f \n' % (i+1, nll_iter_tr, nll_iter_te))
         
         i+=1
         
