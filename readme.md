@@ -36,7 +36,7 @@ First, run the following script.
 
 After running the EM algorithm we have all the probability assignments of users and products to their respective latent classes. Given the imposed topological organization, we can think of these quantities as images where each pixel represents a latent class and the corresponding value is the latent class probability assignment. This script is used to create the correct input for the architecture. Below, an example of the input transformation. 
 
-<img src="https://github.com/GiuseppeSerra93/TLCM/blob/main/images/fig1.png" height="150">
+<img src="https://github.com/GiuseppeSerra93/TLCM/blob/main/images/fig1.png" height="200">
  
 Now, we can run the architecture using the following command:
  - `python run_CNN_architecture.py -epochs={} -bs={} -lr={} -gpu={} -K={} -L={} -runs={}`
@@ -52,8 +52,8 @@ Now, we can run the architecture using the following command:
 To visualize and evaluate the results using the output of our experiments, we provided a Jupyter notebook file `results_visualization.ipynb`. This file contains all the instructions to reproduce and to manually explore the results contained in the paper.
 
 <p float="left">
-  <img src="https://github.com/GiuseppeSerra93/TLCM/blob/main/images/map_products.png" width="32%" />
-  <img src="https://github.com/GiuseppeSerra93/TLCM/blob/main/images/map_users.png" width="32%" /> 
-  <img src="https://github.com/GiuseppeSerra93/TLCM/blob/main/images/generative_extension.png" width="32%" />
+  <img src="https://github.com/GiuseppeSerra93/TLCM/blob/main/images/map_products.png" width=270 height=480> />
+  <img src="https://github.com/GiuseppeSerra93/TLCM/blob/main/images/map_users.png" width=270 height=480> /> 
+  <img src="https://github.com/GiuseppeSerra93/TLCM/blob/main/images/generative_extension.png" width=270 height=480> />
 </p>
 
