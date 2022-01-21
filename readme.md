@@ -54,6 +54,6 @@ To visualize and evaluate the results using the output of our experiments, we pr
 <p float="left">
   <img src="https://github.com/GiuseppeSerra93/TLCM/blob/main/images/map_products.png" width="28%" />
   <img src="https://github.com/GiuseppeSerra93/TLCM/blob/main/images/map_users.png" width="29%" /> 
-  <img src="https://github.com/GiuseppeSerra93/TLCM/blob/main/images/generative_extension.png" width="32%" />
+  <img src="https://github.com/GiuseppeSerra93/TLCM/blob/main/images/generative_extension.png" width="33%" />
 </p>
 
