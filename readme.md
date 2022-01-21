@@ -52,8 +52,8 @@ Now, we can run the architecture using the following command:
 To visualize and evaluate the results using the output of our experiments, we provided a Jupyter notebook file `results_visualization.ipynb`. This file contains all the instructions to reproduce and to manually explore the results contained in the paper.
 
 <p float="left">
-  <img src="https://github.com/GiuseppeSerra93/TLCM/blob/main/images/map_products.png" width=270 height=480> />
-  <img src="https://github.com/GiuseppeSerra93/TLCM/blob/main/images/map_users.png" width=270 height=480> /> 
-  <img src="https://github.com/GiuseppeSerra93/TLCM/blob/main/images/generative_extension.png" width=270 height=480> />
+  <img src="https://github.com/GiuseppeSerra93/TLCM/blob/main/images/map_products.png" width="28%" />
+  <img src="https://github.com/GiuseppeSerra93/TLCM/blob/main/images/map_users.png" width="30%" /> 
+  <img src="https://github.com/GiuseppeSerra93/TLCM/blob/main/images/generative_extension.png" width="32%" />
 </p>
 
