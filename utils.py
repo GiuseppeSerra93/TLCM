@@ -26,16 +26,16 @@ B_PRODUCTS = (1-A_PRODUCTS)/(L-1)
 # parameters for EM training
 TOLERANCE = 5e-4    # tolerance
 MAX_ITER = 50       # max number of iteration
-MAX_PATIENCE = 5    # patience steps
+MAX_PATIENCE = 10    # patience steps
 
 # parameters for rating prediction part
 NUM_EPOCHS = 200
 BATCH_SIZE = 256
-LEARNING_RATE = 0.05
+LEARNING_RATE = 0.02
 NUM_RUNS = 5
 
 CATEGORIES = ['automotive', 'baby', 'beauty',
               'cellphones', 'digital_music', 'food', 'health',
               'instant_videos', 'musical_instruments', 'office',
               'patio', 'pet', 'sports', 'tools', 'toys', 'videogames']
-CATEGORIES = ['automotive']
+CATEGORIES = ['patio']
