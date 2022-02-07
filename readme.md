@@ -1,5 +1,4 @@
-﻿
-## Review-based Topographic Organization of Latent Classes
+﻿## Review-based Topographic Organization of Latent Classes
 
 This repository contains code for the paper "*Product Rating Prediction through Interpretable Latent Class Modeling of User Reviews*" (Serra, Tino, Xu & Yao).
 
@@ -10,12 +9,16 @@ After data preparation, our software comprises three major parts:
 2. Rating prediction part.
 3. Evaluation of the results through both quantitative and qualitative experiments.
 
-
 ### Data sets
 In the repository we uploaded a zipped folder (`preprocessed_data.zip`) containing all the necessary data for running the experiments. The folder is organized in subfolders divided per category. The raw reviews, instead, are publicly available [here](https://jmcauley.ucsd.edu/data/amazon/). Please note that we use the 5-core version of these data sets.
 
-### Dependencies
-All the dependencies are installed if `pip install -r requirements.txt` is run.
+### Requirements
+ - `tensorflow==2.3.0` or `tensorflow-gpu==2.3.0`
+ - `numpy==1.21.2`
+ - `scikit-learn==1.0.2`
+ - `minisom==2.2.9`
+ - `matplotlib==3.5.0`
+ - `seaborn=0.11.2` 
 
 ### Utils
 The python file `utils.py` contains file paths and hyperparameters needed to run all the scripts. The list of data sets to evaluate can be changed in this file.
