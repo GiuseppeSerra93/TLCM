@@ -1,6 +1,6 @@
-﻿## Review-based Topographic Organization of Latent Classes
+﻿## Transparent Latent Class Modeling of User Reviews
 
-This repository contains code for the paper "*Product Rating Prediction through Interpretable Latent Class Modeling of User Reviews*" (Serra, Tino, Xu & Yao).
+This repository contains code for the paper "*An Interpretable Alternative to Neural Representation Learning for Rating Prediction - Transparent Latent Class Modeling of User Reviews*" (Serra, Tino, Xu & Yao).
 
 For each product category, the code contains all the necessary steps to reproduce the experiments. The scripts are implemented with Python 3.7, and have been tested with Windows OS.
 
