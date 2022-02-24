@@ -1,4 +1,4 @@
-﻿## Transparent Latent Class Modeling of User Reviews
+﻿## TLCM: Transparent Latent Class Modeling of User Reviews
 
 This repository contains code for the paper "*An Interpretable Alternative to Neural Representation Learning for Rating Prediction - Transparent Latent Class Modeling of User Reviews*".
 
